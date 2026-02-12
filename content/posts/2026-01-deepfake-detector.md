@@ -9,10 +9,11 @@ ShowToc: true
 TocOpen: true
 ---
 
-> **Author:** Radu-Petruț Vătase
-> **Supervisor:** Conf. dr. Emil Simion
-> **Faculty:** Facultatea de Matematică și Informatică, Universitatea din București ([tcsi.ro](https://tcsi.ro))
-> **Course:** Teoria Codării și Stocării Informației — January 2026
+> **Author:** Radu-Petruț Vătase — [UPB](https://tcsi.ro/) | January 2026
+
+{{< lang-toggle >}}
+
+{{< lang en >}}
 
 **Keywords:** Deepfake, Convolutional Neural Networks, Spectral Analysis, Transfer Learning
 
@@ -97,8 +98,6 @@ The system is publicly available at:
 
 ### 4.2 Additional Analyses
 
-Beyond the main FFT analysis, the system offers additional diagnostic modules:
-
 ![FFT 2D Spectrum](/images/deepfake-detector/fft_2d_spectrum.png)
 *Figure 2: 2D FFT Spectrum — frequency component visualization*
 
@@ -140,8 +139,6 @@ Beyond the main FFT analysis, the system offers additional diagnostic modules:
 - **Infrastructure limitation:** Colab session expired in Epoch 9/10 (free tier)
 
 ### 5.3 Comparative Analysis
-
-Results validate the superiority of Deep Learning over classical methods:
 
 - **Random Forest:** Weak generalization (54%), insufficient manual feature engineering
 - **CNN Xception:** Strong generalization (75.2%), automatic feature learning, high AUC (0.829)
@@ -185,3 +182,177 @@ Results validate the superiority of Deep Learning over classical methods:
 4. Kaggle, "140k Real and Fake Faces Dataset", 2023.
 5. OpenAI, "GPT-4 Technical Report", 2024.
 6. Streamlit Inc., "Streamlit Community Cloud Documentation", 2025.
+
+{{< /lang >}}
+
+{{< lang ro >}}
+
+**Cuvinte cheie:** Deepfake, Rețele neuronale convoluționale, Analiză spectrală, Transfer Learning
+
+---
+
+## Rezumat
+
+Prezenta lucrare propune un sistem hibrid pentru detectarea imaginilor generate sintetic (deepfake), combinând analiza matematică în domeniul frecvenței (Fast Fourier Transform), algoritmi de Machine Learning clasic (Random Forest) și tehnici avansate de Deep Learning (CNN Xception). Studiul comparativ demonstrează limitările abordărilor bazate pe trăsături extrase manual (acuratețe 54%) față de robustețea rețelelor neuronale convoluționale antrenate în cloud pe GPU Tesla T4. Rezultatele obținute după 6 epoci complete de antrenare arată o acuratețe de validare de 75.2% și un scor AUC de 0.829, confirmând eficiența arhitecturii Xception pentru detectarea deepfake-urilor. Sistemul integrează un modul de Explainable AI bazat pe GPT-4o pentru interpretarea semantică a anomaliilor spectrale, fiind accesibil printr-o interfață web publică.
+
+---
+
+## 1. Introducere
+
+În era digitală actuală, integritatea informației vizuale reprezintă o provocare majoră. Avansul rețelelor generative antagoniste (GANs) a permis crearea de falsuri fotorealiste, ridicând probleme serioase în domeniul securității cibernetice, jurnalismului și autentificării identității. Această lucrare abordează problema detecției automate prin metode complementare, oferind o soluție accesibilă cercetătorilor și publicului larg.
+
+## 2. Fundamentare teoretică
+
+Detectarea falsurilor se bazează pe ipoteza că generarea sintetică introduce anomalii statistice invizibile ochiului uman, dar detectabile matematic și prin rețele neuronale profunde.
+
+### 2.1 Analiza în domeniul frecvenței (FFT)
+
+Transformata Fourier 2D identifică artefactele periodice introduse de operațiile de upsampling din GAN-uri:
+
+$$F(u,v) = \sum_{x=0}^{M-1} \sum_{y=0}^{N-1} I(x,y) \cdot e^{-j2\pi(\frac{ux}{M} + \frac{vy}{N})}$$
+
+![Exemplu analiză FFT](/images/deepfake-detector/fft_example.png)
+*Figura 1: Exemplu analiză FFT*
+
+**Limitări:** Generatoarele moderne (StyleGAN3, DALL-E 3, Midjourney v6) produc imagini cu distribuții spectrale aproape identice cu cele reale, făcând analiza FFT insuficientă ca metodă primară. Această constatare a justificat trecerea către Deep Learning.
+
+### 2.2 Arhitectura CNN Xception
+
+Xception utilizează Depthwise Separable Convolutions pentru eficiență computațională superioară. Arhitectura pre-antrenată pe ImageNet (1.4M imagini) este adaptată prin Transfer Learning pe 100.000 imagini deepfake/reale.
+
+## 3. Metodologie și arhitectură
+
+Sistemul combină trei componente complementare:
+
+1. **FFT (Analiză Spectrală):** Oferă explicabilitate vizuală
+2. **Random Forest:** Baseline clasic (5 features extrase manual)
+3. **CNN Xception:** Componentă decisivă (Transfer Learning)
+
+### 3.1 Dataset și platformă de antrenare
+
+**Date utilizate:**
+- Random Forest: 2.041 imagini (training local)
+- CNN: 100.000 imagini din "140k Real and Fake Faces" [4]
+- Split: 80% training (80.000) / 20% validation (20.000)
+
+| | |
+|:---:|:---:|
+| ![Imagine reală](/images/deepfake-detector/real/exemplu_real.jpg) | ![Imagine deepfake](/images/deepfake-detector/fake/exemplu_fake.jpg) |
+| *Imagine reală — fotografie autentică* | *Imagine deepfake — generată cu AI* |
+
+**Infrastructură:**
+Datorită limitărilor hardware locale (placă video RTX 3050 4GB cu incompatibilități CUDA), antrenamentul s-a desfășurat în Google Colab pe accelerator Tesla T4 (16GB VRAM), reducând timpul de la 40+ ore (CPU local) la aproximativ 2 ore/epocă.
+
+### 3.2 Strategie Transfer Learning
+
+**Faza 1 (Base Frozen):**
+- Learning Rate: 0.001
+- Loss: Binary Crossentropy
+- Optimizator: Adam
+- Callbacks: ModelCheckpoint, EarlyStopping, ReduceLROnPlateau
+
+**Faza 2 (Fine-Tuning):** Unfreeze ultimele 20 straturi, LR=0.0001 (planificată, neexecutată din cauza expirării sesiunii Colab)
+
+## 4. Implementare și interfață
+
+### 4.1 Aplicația web Streamlit
+
+Sistemul este disponibil public la:
+**[https://deepfake-detector-tcsivtstcsitcsi.streamlit.app/](https://deepfake-detector-tcsivtstcsitcsi.streamlit.app/)**
+
+**Deployment:** Streamlit Cloud cu Python 3.11, TensorFlow 2.15.1, model CNN (80MB) încărcat pe GitHub.
+
+**Features Explainable AI:**
+- Vizualizare spectru FFT 2D și profil radial
+- Interpretare semantică prin OpenAI GPT-4o
+- Predicție CNN cu breakdown probabilități
+- Analiză comparativă între metode (FFT/RF/CNN)
+
+### 4.2 Analize suplimentare
+
+![Spectru 2D FFT](/images/deepfake-detector/fft_2d_spectrum.png)
+*Figura 2: Spectru 2D FFT — vizualizare componente de frecvență*
+
+| | |
+|:---:|:---:|
+| ![Color Histogram](/images/deepfake-detector/color_histogram.png) | ![Gradient Magnitude](/images/deepfake-detector/gradient_magnitude.png) |
+| *Color Histogram — distribuție canale RGB* | *Gradient Magnitude — hartă de detalii* |
+
+| | |
+|:---:|:---:|
+| ![Noise Pattern](/images/deepfake-detector/noise_pattern.png) | ![EXIF Metadata](/images/deepfake-detector/exif_metadata.png) |
+| *Noise Pattern — analiză zgomot* | *EXIF Metadata — informații cameră* |
+
+## 5. Rezultate experimentale
+
+### 5.1 Comparație performanță
+
+| Metodă | Acuratețe | AUC | Recall | Observații |
+|--------|-----------|-----|--------|------------|
+| Random Forest | 54.0% | — | 20% (Fake) | Bias sever spre Real |
+| **CNN Ep. 6 (Best)** | **75.20%** | **0.8286** | **74.84%** | **Optim după LR decay** |
+| CNN Epoch 3 | 74.67% | 0.8273 | 78.90% | Peak inițial |
+
+### 5.2 Evoluția antrenamentului
+
+| Epoca | Train Acc | Val Acc | Val AUC | Val Recall | Status |
+|-------|-----------|---------|---------|------------|--------|
+| 1 | 66.65% | 73.52% | 0.8150 | 78.04% | Salvat |
+| 2 | 70.46% | 74.43% | 0.8231 | 79.46% | Salvat |
+| 3 | 70.45% | 74.67% | 0.8273 | 78.90% | Peak inițial |
+| 4 | 70.09% | 73.23% | 0.8248 | 83.37% | Val drop |
+| 5 | 70.06% | 74.40% | 0.8279 | 80.73% | LR→0.0005 |
+| **6** | **70.26%** | **75.20%** | **0.8286** | **74.84%** | **Best final** |
+
+**Observații:**
+- **Convergență rapidă:** 73.5% acuratețe în prima epocă
+- **Efectul ReduceLROnPlateau:** LR scăzut la 0.0005 în Epoca 5 → îmbunătățire Val Accuracy la 75.2% (Epoca 6)
+- **Timp/epocă:** ~33-37 minute pe Tesla T4 (2017-2212s)
+- **Limitare infrastructură:** Sesiune Colab expirată în Epoca 9/10 (tier gratuit)
+
+### 5.3 Analiză comparativă
+
+- **Random Forest:** Generalizare slabă (54%), feature engineering manual insuficient
+- **CNN Xception:** Generalizare puternică (75.2%), învățare automată de features, AUC ridicat (0.829)
+
+## 6. Concluzii și direcții viitoare
+
+### Realizări
+
+1. **Sistem funcțional complet:** Deployment public pe Streamlit Cloud
+2. **Performanță validată:** 75.2% accuracy, AUC 0.829 pe 20.000 imagini de validare
+3. **Explicabilitate:** Integrare GPT-4o pentru interpretare grafice și valori
+4. **Comparație metodologică:** Evidențierea limitărilor FFT și Random Forest vs. CNN
+
+### Limitări
+
+**Infrastructură:**
+- Antrenament incomplet (6/20 epoci planificate) din cauza expirării sesiunii Colab gratuite
+- Model final suboptimal — necesită Faza 2 (fine-tuning) pentru 88-92% accuracy
+
+![Sesiune Colab expirată](/images/deepfake-detector/colab_epoch_limitation.png)
+*Figura 3: Sesiune Google Colab expirată în timpul Epocii 9 — limitare infrastructură gratuită*
+
+**Metodologice:**
+- Detecție limitată la imagini statice (nu video)
+- Performanță necunoscută pe deepfake-uri sofisticate (post-procesate profesional)
+- Dataset cu imagini din 2020-2024 — imaginile AI generate cu software de ultima generație pot fi mai complicat de distins
+
+### Direcții viitoare
+
+- **Finalizare training:** Completare Faza 1 (epoci 7-10) + Faza 2 (fine-tuning)
+- **Analiză video:** Extindere la detectare deepfake-uri video (frame-by-frame + temporal consistency)
+- **Combinarea mai multor metode:** Combinare Xception + EfficientNet + Vision Transformer
+
+---
+
+## Bibliografie
+
+1. Chollet, F., "Xception: Deep Learning with Depthwise Separable Convolutions", *CVPR*, 2017.
+2. Durall, R., et al., "Watch your Up-Convolution: CNN Based Generative Deep Neural Networks are Failing to Reproduce Spectral Distributions", *CVPR*, 2020.
+3. Karras, T., et al., "Analyzing and Improving the Image Quality of StyleGAN", *CVPR*, 2020.
+4. Kaggle, "140k Real and Fake Faces Dataset", 2023.
+5. OpenAI, "GPT-4 Technical Report", 2024.
+6. Streamlit Inc., "Streamlit Community Cloud Documentation", 2025.
+
+{{< /lang >}}
