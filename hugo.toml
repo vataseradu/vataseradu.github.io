@@ -9,7 +9,7 @@ enableRobotsTXT = true
 
 [params]
   author = 'vataseradu'
-  description = 'Cybersecurity research, CTF writeups, and academic notes.'
+  description = 'Cybersecurity research and academic notes.'
   ShowReadingTime = true
   ShowShareButtons = false
   ShowPostNavLinks = true
@@ -22,11 +22,11 @@ enableRobotsTXT = true
 
   [params.homeInfoParams]
     Title = 'vataseradu'
-    Content = """Vulnerability Manager & Penetration Tester @ [Safetech Innovations](https://safetech.ro/)
-Master's in Cybersecurity — [Theory of Coding and Storage of Information](https://tcsi.ro/), UPB
+    Content = """Vulnerability Manager & Penetration Tester @ [Safetech Innovations](https://safetech.ro/)<br>
+Master's in Cybersecurity — [Theory of Coding and Storage of Information](https://tcsi.ro/), UPB<br>
 Bachelor's in Electrical Engineering in Applied Informatics — [electro.upb.ro](https://electro.upb.ro/)
 
-Cybersecurity research, CTF writeups and academic notes."""
+Cybersecurity research and academic notes."""
 
   [[params.socialIcons]]
     name = 'github'
