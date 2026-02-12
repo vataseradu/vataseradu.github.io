@@ -1,0 +1,55 @@
+/* Wider content area */
+.main {
+  max-width: 900px;
+}
+
+/* Justified text in posts */
+.post-content p {
+  text-align: justify;
+}
+
+/* Centered images */
+.post-content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Image captions */
+.post-content img + em,
+.post-content p > em:only-child {
+  display: block;
+  text-align: center;
+  color: #666;
+  font-size: 0.9em;
+  margin-top: -0.5em;
+  margin-bottom: 1em;
+}
+
+/* Language toggle */
+.lang-switch {
+  margin-bottom: 1.5rem;
+}
+.lang-btn {
+  padding: 5px 16px;
+  border: 1px solid var(--border);
+  background: var(--code-bg);
+  color: var(--content);
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+.lang-btn:first-child {
+  border-radius: 4px 0 0 4px;
+}
+.lang-btn:last-child {
+  border-radius: 0 4px 4px 0;
+  border-left: none;
+}
+.lang-btn.active {
+  background: var(--content);
+  color: var(--theme);
+  border-color: var(--content);
+}
+.lang-ro { display: none; }
