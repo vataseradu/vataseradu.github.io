@@ -1,0 +1,80 @@
+baseURL = 'https://vataseradu.github.io/'
+languageCode = 'en'
+title = 'vataseradu'
+theme = 'PaperMod'
+[pagination]
+  pagerSize = 10
+
+enableRobotsTXT = true
+
+[params]
+  author = 'vataseradu'
+  description = 'Cybersecurity research, CTF writeups, and academic notes.'
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  TocOpen = false
+  defaultTheme = 'light'
+  disableThemeToggle = false
+
+  [params.homeInfoParams]
+    Title = 'vataseradu'
+    Content = 'Cybersecurity research, CTF writeups, and academic notes.'
+
+  [[params.socialIcons]]
+    name = 'github'
+    url = 'https://github.com/vataseradu'
+
+[params.assets]
+  disableHLJS = false
+
+[markup]
+  [markup.highlight]
+    style = 'monokai'
+    lineNos = false
+    noClasses = true
+
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[[menu.main]]
+  name = 'About'
+  url = '/about/'
+  weight = 1
+
+[[menu.main]]
+  name = 'Archive'
+  url = '/archive/'
+  weight = 2
+
+[[menu.main]]
+  name = 'Categories'
+  url = '/categories/'
+  weight = 3
+
+[[menu.main]]
+  name = 'Tags'
+  url = '/tags/'
+  weight = 4
+
+[[menu.main]]
+  name = 'Projects'
+  url = '/projects/'
+  weight = 5
+
+[[menu.main]]
+  name = 'Tools'
+  url = '/tools/'
+  weight = 6
+
+[[menu.main]]
+  name = 'Search'
+  url = '/search/'
+  weight = 7
+
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']
