@@ -1,4 +1,10 @@
 public/
 resources/
 .hugo_build.lock
+.claude/
 NOTES.md
+.DS_Store
+Thumbs.db
+*.swp
+*.bak
+.env
