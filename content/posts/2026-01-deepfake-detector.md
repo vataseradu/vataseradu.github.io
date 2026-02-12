@@ -11,7 +11,8 @@ TocOpen: true
 
 > **Author:** Radu-Petruț Vătase
 > **Supervisor:** Conf. dr. Emil Simion
-> **Course:** Information Coding and Storage Theory — January 2026
+> **Faculty:** Facultatea de Matematică și Informatică, Universitatea din București ([tcsi.ro](https://tcsi.ro))
+> **Course:** Teoria Codării și Stocării Informației — January 2026
 
 **Keywords:** Deepfake, Convolutional Neural Networks, Spectral Analysis, Transfer Learning
 
