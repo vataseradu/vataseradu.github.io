@@ -8,7 +8,13 @@ ShowBreadCrumbs: false
 
 ## whoami
 
-I'm **vataseradu** (Vatase Radu) — a cybersecurity enthusiast, academic researcher, and CTF player.
+**Vulnerability Manager & Penetration Tester** @ [Safetech Innovations](https://safetech.ro/)
+
+**Masters in Cybersecurity** — [Theory of Coding and Storage of Information](https://tcsi.ro/), UPB
+
+**Bachelor in Electrical Engineering in Applied Informatics** — [electro.upb.ro](https://electro.upb.ro/)
+
+---
 
 This blog is where I share my work across several areas:
 

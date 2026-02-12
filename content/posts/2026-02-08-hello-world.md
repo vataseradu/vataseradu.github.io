@@ -1,12 +1,12 @@
 ---
 title: "Hello World"
-date: 2026-02-08
+date: 2025-12-01
 categories: ["general"]
 tags: ["intro", "blog"]
-summary: "Welcome to my blog."
+summary: "First post — what this blog is about."
 ---
 
-Welcome to my blog. This is where I'll be posting:
+This is where I'll be posting:
 
 - **CTF Writeups** — detailed walkthroughs of challenges I solve
 - **Cybersecurity Research** — vulnerability analysis, pentesting notes, and security findings

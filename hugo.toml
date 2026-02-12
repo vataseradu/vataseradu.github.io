@@ -22,7 +22,11 @@ enableRobotsTXT = true
 
   [params.homeInfoParams]
     Title = 'vataseradu'
-    Content = 'Cybersecurity research, CTF writeups, and academic notes.'
+    Content = """Vulnerability Manager & Penetration Tester @ [Safetech Innovations](https://safetech.ro/)
+Masters in Cybersecurity — [Theory of Coding and Storage of Information](https://tcsi.ro/), UPB
+Bachelor in Electrical Engineering in Applied Informatics — [electro.upb.ro](https://electro.upb.ro/)
+
+Cybersecurity research, CTF writeups and academic notes."""
 
   [[params.socialIcons]]
     name = 'github'
