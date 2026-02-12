@@ -6,9 +6,9 @@ tags: ["intro", "blog"]
 summary: "Welcome to my blog."
 ---
 
-{{< lang-toggle >}}
+{{% lang-toggle %}}
 
-{{< lang en >}}
+{{% lang en %}}
 Welcome to my blog. This is where I'll be posting:
 
 - **CTF Writeups** — detailed walkthroughs of challenges I solve
@@ -16,9 +16,9 @@ Welcome to my blog. This is where I'll be posting:
 - **Academic Work** — research papers, notes, and projects from university and master's studies
 
 Stay tuned.
-{{< /lang >}}
+{{% /lang %}}
 
-{{< lang ro >}}
+{{% lang ro %}}
 Bine ați venit pe blogul meu. Aici voi posta:
 
 - **Writeup-uri CTF** — rezolvări detaliate ale challenge-urilor
@@ -26,4 +26,4 @@ Bine ați venit pe blogul meu. Aici voi posta:
 - **Lucrări Academice** — articole de cercetare, notițe și proiecte de la facultate și master
 
 Stay tuned.
-{{< /lang >}}
+{{% /lang %}}

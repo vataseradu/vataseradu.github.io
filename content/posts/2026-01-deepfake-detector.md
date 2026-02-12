@@ -11,9 +11,9 @@ TocOpen: true
 
 > **Author:** Radu-Petruț Vătase — [UPB](https://tcsi.ro/) | January 2026
 
-{{< lang-toggle >}}
+{{% lang-toggle %}}
 
-{{< lang en >}}
+{{% lang en %}}
 
 **Keywords:** Deepfake, Convolutional Neural Networks, Spectral Analysis, Transfer Learning
 
@@ -183,9 +183,9 @@ The system is publicly available at:
 5. OpenAI, "GPT-4 Technical Report", 2024.
 6. Streamlit Inc., "Streamlit Community Cloud Documentation", 2025.
 
-{{< /lang >}}
+{{% /lang %}}
 
-{{< lang ro >}}
+{{% lang ro %}}
 
 **Cuvinte cheie:** Deepfake, Rețele neuronale convoluționale, Analiză spectrală, Transfer Learning
 
@@ -355,4 +355,4 @@ Sistemul este disponibil public la:
 5. OpenAI, "GPT-4 Technical Report", 2024.
 6. Streamlit Inc., "Streamlit Community Cloud Documentation", 2025.
 
-{{< /lang >}}
+{{% /lang %}}

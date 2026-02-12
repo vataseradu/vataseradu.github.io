@@ -6,9 +6,9 @@ ShowReadingTime: false
 ShowBreadCrumbs: false
 ---
 
-{{< lang-toggle >}}
+{{% lang-toggle %}}
 
-{{< lang en >}}
+{{% lang en %}}
 ## whoami
 
 I'm **vataseradu** (Vatase Radu) — a cybersecurity enthusiast, academic researcher, and CTF player.
@@ -23,9 +23,9 @@ This blog is where I share my work across several areas:
 ## Contact
 
 - GitHub: [vataseradu](https://github.com/vataseradu)
-{{< /lang >}}
+{{% /lang %}}
 
-{{< lang ro >}}
+{{% lang ro %}}
 ## whoami
 
 Sunt **vataseradu** (Vatase Radu) — pasionat de cybersecurity, cercetător academic și jucător CTF.
@@ -40,4 +40,4 @@ Pe acest blog public lucrările mele din mai multe arii:
 ## Contact
 
 - GitHub: [vataseradu](https://github.com/vataseradu)
-{{< /lang >}}
+{{% /lang %}}
