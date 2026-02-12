@@ -9,7 +9,7 @@ ShowToc: true
 TocOpen: true
 ---
 
-> **Author:** Radu-Petruț Vătase — [UPB](https://tcsi.ro/) | January 2026
+> **Author:** Radu-Petruț Vătase — [TCSI](https://tcsi.ro/) | January 2026
 
 **Keywords:** Deepfake, Convolutional Neural Networks, Spectral Analysis, Transfer Learning
 

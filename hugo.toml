@@ -23,8 +23,8 @@ enableRobotsTXT = true
   [params.homeInfoParams]
     Title = 'vataseradu'
     Content = """Vulnerability Manager & Penetration Tester @ [Safetech Innovations](https://safetech.ro/)
-Masters in Cybersecurity — [Theory of Coding and Storage of Information](https://tcsi.ro/), UPB
-Bachelor in Electrical Engineering in Applied Informatics — [electro.upb.ro](https://electro.upb.ro/)
+Master's in Cybersecurity — [Theory of Coding and Storage of Information](https://tcsi.ro/), UPB
+Bachelor's in Electrical Engineering in Applied Informatics — [electro.upb.ro](https://electro.upb.ro/)
 
 Cybersecurity research, CTF writeups and academic notes."""
 

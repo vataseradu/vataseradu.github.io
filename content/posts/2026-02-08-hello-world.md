@@ -3,7 +3,15 @@ title: "Hello World"
 date: 2025-12-01
 categories: ["general"]
 tags: ["intro", "blog"]
-summary: "First post — what this blog is about."
+summary: "First post — who I am and what this blog is about."
+---
+
+**Vulnerability Manager & Penetration Tester** @ [Safetech Innovations](https://safetech.ro/)
+
+**Master's in Cybersecurity** — [Theory of Coding and Storage of Information](https://tcsi.ro/), UPB
+
+**Bachelor's in Electrical Engineering in Applied Informatics** — [electro.upb.ro](https://electro.upb.ro/)
+
 ---
 
 This is where I'll be posting:

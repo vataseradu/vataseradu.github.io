@@ -10,9 +10,9 @@ ShowBreadCrumbs: false
 
 **Vulnerability Manager & Penetration Tester** @ [Safetech Innovations](https://safetech.ro/)
 
-**Masters in Cybersecurity** — [Theory of Coding and Storage of Information](https://tcsi.ro/), UPB
+**Master's in Cybersecurity** — [Theory of Coding and Storage of Information](https://tcsi.ro/), UPB
 
-**Bachelor in Electrical Engineering in Applied Informatics** — [electro.upb.ro](https://electro.upb.ro/)
+**Bachelor's in Electrical Engineering in Applied Informatics** — [electro.upb.ro](https://electro.upb.ro/)
 
 ---
 
