@@ -8,8 +8,6 @@ ShowToc: true
 TocOpen: true
 ---
 
-> **Author:** Radu-Petruț Vătase — [TCSI](https://tcsi.ro/) | May 2026
-
 **Keywords:** reverse engineering, ELF, static analysis, IDA, XOR, CTF
 
 **Platform:** [cyber-edu.co](https://app.cyber-edu.co/) — Reverse Engineering category
