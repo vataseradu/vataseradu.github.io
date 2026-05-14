@@ -127,19 +127,18 @@ In the data view at `0xD3800`, select 69 bytes (`0xD3800`–`0xD3844`), then `Sh
 ![CyberChef recipe](/images/ctf-writeup-reverse-engineering-mario-bros/09-cyberchef.png)
 *Figure 9: Output panel contains the flag.*
 
-Flag format:
+Flag:
 
 ```
 HTA{ef44**********************************************************fa7}
 ```
-
-*(Hex body redacted.)*
 
 ---
 
 ## Notes
 
 - Always check whether a binary is stripped before deciding on a workflow. An unstripped C++ binary with a constant named `kEncryptedFlag` is a single-xref problem.
+- We got the flag without playing the game.
 - "Play the game" gates in CTFs are rarely cryptographic. If the gated function reads a fixed constant rather than deriving a key from runtime state, the gate is irrelevant to static analysis.
 
-**Tools:** [Detect It Easy](https://github.com/horsicq/Detect-It-Easy) · [IDA Free](https://hex-rays.com/ida-free) · [CyberChef](https://gchq.github.io/CyberChef/) · `strings` (binutils)
+**Tools:** [Detect It Easy](https://github.com/horsicq/Detect-It-Easy) · [IDA Free](https://hex-rays.com/ida-free) · [CyberChef](https://gchq.github.io/CyberChef/) · `strings` 
