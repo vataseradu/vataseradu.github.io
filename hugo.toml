@@ -2,14 +2,19 @@ baseURL = 'https://vataseradu.github.io/'
 languageCode = 'en'
 title = 'vataseradu'
 theme = 'PaperMod'
+
+# SEO & Performance
+enableRobotsTXT = true
+enableSitemap = true
+outputFormats = { SearchIndex = { baseName = "searchindex", mediaType = "application/json", isPlainText = true, notAlternative = true } }
+
 [pagination]
   pagerSize = 10
 
-enableRobotsTXT = true
-
 [params]
   author = 'vataseradu'
-  description = 'Cybersecurity research and academic notes.'
+  description = 'Cybersecurity research, penetration testing, and academic notes by Vatase Radu'
+  keywords = 'cybersecurity, penetration testing, vulnerability research, CTF writeups, infosec'
   ShowReadingTime = true
   ShowShareButtons = false
   ShowPostNavLinks = true
@@ -19,7 +24,11 @@ enableRobotsTXT = true
   TocOpen = false
   defaultTheme = 'light'
   disableThemeToggle = false
-
+  profileMode = false
+  
+  # Open Graph & Social
+  images = ["https://vataseradu.github.io/og-image.png"]
+  
   [params.homeInfoParams]
     Title = 'vataseradu'
     Content = """Vulnerability Manager & Penetration Tester @ [Safetech Innovations](https://safetech.ro/)<br>
@@ -31,6 +40,10 @@ Cybersecurity research and academic notes."""
   [[params.socialIcons]]
     name = 'github'
     url = 'https://github.com/vataseradu'
+  
+  [[params.socialIcons]]
+    name = 'email'
+    url = 'mailto:contact@vataseradu.github.io'
 
 [params.assets]
   disableHLJS = false
@@ -88,3 +101,5 @@ Cybersecurity research and academic notes."""
 
 [outputs]
   home = ['HTML', 'RSS', 'JSON']
+  section = ['HTML', 'RSS']
+  page = ['HTML']
