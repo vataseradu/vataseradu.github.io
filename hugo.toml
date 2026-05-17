@@ -1,6 +1,6 @@
 baseURL = 'https://vataseradu.github.io/'
 languageCode = 'en'
-title = 'vataseradu'
+title = 'Vatase Radu - Cybersecurity Research'
 theme = 'PaperMod'
 
 # SEO & Performance
@@ -12,9 +12,9 @@ outputFormats = { SearchIndex = { baseName = "searchindex", mediaType = "applica
   pagerSize = 10
 
 [params]
-  author = 'vataseradu'
-  description = 'Cybersecurity research, penetration testing, and academic notes by Vatase Radu'
-  keywords = 'cybersecurity, penetration testing, vulnerability research, CTF writeups, infosec'
+  author = 'Vatase Radu'
+  description = 'Cybersecurity research and academic notes by Vatase Radu'
+  keywords = 'Vatase Radu, cybersecurity, penetration testing, vulnerability research, CTF writeups, infosec'
   ShowReadingTime = true
   ShowShareButtons = false
   ShowPostNavLinks = true
@@ -30,12 +30,14 @@ outputFormats = { SearchIndex = { baseName = "searchindex", mediaType = "applica
   images = ["https://vataseradu.github.io/og-image.png"]
   
   [params.homeInfoParams]
-    Title = 'vataseradu'
+    Title = 'Vatase Radu'
     Content = """Vulnerability Manager & Penetration Tester @ [Safetech Innovations](https://safetech.ro/)<br>
 Master's in Cybersecurity — [Theory of Coding and Storage of Information](https://tcsi.ro/), UPB<br>
 Bachelor's in Electrical Engineering in Applied Informatics — [electro.upb.ro](https://electro.upb.ro/)
 
-Cybersecurity research and academic notes."""
+Cybersecurity research and academic notes.
+
+*Vatase Radu*"""
 
   [[params.socialIcons]]
     name = 'github'
