@@ -1,6 +1,6 @@
 baseURL = 'https://vataseradu.github.io/'
 languageCode = 'en'
-title = 'vataseradu'
+title = 'Vatase Radu - Cybersecurity Research'
 theme = 'PaperMod'
 
 # SEO & Performance
@@ -30,6 +30,9 @@ outputFormats = { SearchIndex = { baseName = "searchindex", mediaType = "applica
 
   [params.profileMode]
     enabled = false
+
+  [params.label]
+    text = 'vataseradu'
   
   [params.homeInfoParams]
     Title = 'vataseradu'
