@@ -14,7 +14,7 @@ outputFormats = { SearchIndex = { baseName = "searchindex", mediaType = "applica
 [params]
   author = 'Vatase Radu'
   description = 'Cybersecurity research and academic notes by Vatase Radu'
-  keywords = 'Vatase Radu, cybersecurity, penetration testing, vulnerability research, CTF writeups, infosec'
+  keywords = ["Vatase Radu", "cybersecurity", "penetration testing", "vulnerability research", "CTF writeups", "infosec"]
   ShowReadingTime = true
   ShowShareButtons = false
   ShowPostNavLinks = true
