@@ -24,10 +24,12 @@ outputFormats = { SearchIndex = { baseName = "searchindex", mediaType = "applica
   TocOpen = false
   defaultTheme = 'light'
   disableThemeToggle = false
-  profileMode = false
-  
+
   # Open Graph & Social
   images = ["https://vataseradu.github.io/og-image.png"]
+
+  [params.profileMode]
+    enabled = false
   
   [params.homeInfoParams]
     Title = 'Vatase Radu'
