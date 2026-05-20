@@ -26,7 +26,7 @@ A small Windows crackme that exposes a gambling-themed menu. One option leads to
 
 ## 1. Initial Recon
 
-Running the binary brings up the menu. Picking the option that should lead to the admin path and entering a negative value yields the guard message "negative values are not allowed".
+Running the binary brings up the menu. Picking the option that should lead to the admin path and entering a negative value yields the guard message `negative values are not allowed`.
 
 ![Application menu](/images/ctf-writeup-crackme-bobgambling/poza2_ctfcrackmebobgam.png)
 *Figure 2: Application menu — "negative values are not allowed".*
