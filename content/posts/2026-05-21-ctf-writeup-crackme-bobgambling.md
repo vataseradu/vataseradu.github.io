@@ -47,7 +47,7 @@ Opening the binary in **Detect It Easy** confirms a standard Windows PE and a cl
 ![DIE output showing flag in strings](/images/ctf-writeup-crackme-bobgambling/poza3_ctfcrackmebobgam.png)
 *Figure 3: DIE detects the binary and exposes the flag in strings.*
 
-The flag is right there — we could stop now. But the cleaner solution (and the one worth writing up) is to actually unlock the admin terminal so the binary itself prints the flag. That means defeating the *negative values are not allowed* check.
+The flag is right there — we could stop now. But the cleaner solution (and the one worth writing up) is to actually unlock the admin terminal so the binary itself prints the flag. That means defeating the *"negative values are not allowed"* check.
 
 ---
 
