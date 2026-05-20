@@ -17,7 +17,7 @@ TocOpen: true
 
 ## Description
 
-A small Windows crackme that exposes a gambling-themed menu. One option leads to an *admin terminal* gated by an input check that rejects negative values. The goal is to reach the admin terminal and retrieve the flag. The strings of the binary already leak the flag, but the intended path is to defeat the input check at runtime.
+A small Windows crackme that exposes a gambling-themed menu. One option leads to an admin terminal gated by an input check that rejects negative values. The goal is to reach the admin terminal and retrieve the flag. The strings of the binary already leak the flag, but the intended path is to defeat the input check at runtime.
 
 ![Challenge page on crackmes.one](/images/ctf-writeup-crackme-bobgambling/poza1_ctfcrackmebobgam.png)
 *Figure 1: Challenge page on crackmes.one.*
@@ -26,7 +26,7 @@ A small Windows crackme that exposes a gambling-themed menu. One option leads to
 
 ## 1. Initial Recon
 
-Running the binary brings up the menu. Picking the option that should lead to the admin path and entering a negative value yields the guard message **"negative values are not allowed"**.
+Running the binary brings up the menu. Picking the option that should lead to the admin path and entering a negative value yields the guard message "negative values are not allowed".
 
 ![Application menu](/images/ctf-writeup-crackme-bobgambling/poza2_ctfcrackmebobgam.png)
 *Figure 2: Application menu — "negative values are not allowed".*
