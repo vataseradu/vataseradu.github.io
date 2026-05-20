@@ -3,6 +3,9 @@ languageCode = 'en'
 title = 'Vatase Radu - Cybersecurity Research'
 theme = 'PaperMod'
 
+# Build
+buildFuture = true
+
 # SEO & Performance
 enableRobotsTXT = true
 enableSitemap = true
